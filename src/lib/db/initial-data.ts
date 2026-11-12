@@ -1,0 +1,430 @@
+import { Category, Post, SiteSettings, Tag } from '@/types';
+
+export const initialSettings: SiteSettings = {
+  siteName: "UbaidBlogs",
+  tagline: "Knowledge • Technology • Success",
+  description: "Your ultimate destination for Artificial Intelligence, Web Development, SEO, Digital Marketing and Technology tutorials. Dream Big, Build Smart.",
+  announcementText: "Welcome to UbaidBlogs — Learn, Grow & Stay Ahead!",
+  announcementActive: true,
+  socialLinks: {
+    facebook: "https://facebook.com/ubaidblogs",
+    youtube: "https://youtube.com/@ubaidblogs",
+    twitter: "https://twitter.com/ubaidblogs",
+    linkedin: "https://linkedin.com/company/ubaidblogs",
+    instagram: "https://instagram.com/ubaidblogs",
+    github: "https://github.com/ubaidblogs"
+  },
+  googleVerification: "google-site-verification-code-sample",
+  allowComments: true,
+  allowNewsletter: true,
+};
+
+export const initialCategories: Category[] = [
+  {
+    id: "cat-1",
+    name: "AI & Tools",
+    slug: "ai-tools",
+    description: "Deep dive into generative AI, modern LLMs, neural networks, and productivity-boosting AI software.",
+    icon: "Bot",
+    count: 24,
+    color: "#FFD21F"
+  },
+  {
+    id: "cat-2",
+    name: "Web Development",
+    slug: "web-development",
+    description: "Modern full-stack web development tutorials covering React, Next.js, TypeScript, Tailwind CSS, and APIs.",
+    icon: "Code2",
+    count: 20,
+    color: "#168CFF"
+  },
+  {
+    id: "cat-3",
+    name: "SEO",
+    slug: "seo",
+    description: "Actionable search engine optimization guides, core web vitals, backlink tactics, and SERP domination.",
+    icon: "TrendingUp",
+    count: 18,
+    color: "#10B981"
+  },
+  {
+    id: "cat-4",
+    name: "Digital Marketing",
+    slug: "digital-marketing",
+    description: "High-ROI digital marketing frameworks, social media strategies, funnel optimization, and paid ad mastery.",
+    icon: "Megaphone",
+    count: 16,
+    color: "#EC4899"
+  },
+  {
+    id: "cat-5",
+    name: "WordPress",
+    slug: "wordpress",
+    description: "WordPress themes, plugin development, speed optimization, and CMS security best practices.",
+    icon: "Globe",
+    count: 14,
+    color: "#3B82F6"
+  },
+  {
+    id: "cat-6",
+    name: "Technology",
+    slug: "technology",
+    description: "Future tech trends, cloud computing, cybersecurity, gadgets, and emerging software paradigms.",
+    icon: "Cpu",
+    count: 12,
+    color: "#8B5CF6"
+  },
+  {
+    id: "cat-7",
+    name: "Productivity",
+    slug: "productivity",
+    description: "High-performance workflows, developer automation, time management methods, and smart tools.",
+    icon: "Zap",
+    count: 9,
+    color: "#F59E0B"
+  }
+];
+
+export const initialTags: Tag[] = [
+  { id: "tag-1", name: "Artificial Intelligence", slug: "artificial-intelligence", count: 18 },
+  { id: "tag-2", name: "Next.js", slug: "nextjs", count: 12 },
+  { id: "tag-3", name: "WordPress 2026", slug: "wordpress-2026", count: 9 },
+  { id: "tag-4", name: "Technical SEO", slug: "technical-seo", count: 14 },
+  { id: "tag-5", name: "ChatGPT & Claude", slug: "chatgpt-claude", count: 15 },
+  { id: "tag-6", name: "Frontend", slug: "frontend", count: 11 },
+  { id: "tag-7", name: "Automation", slug: "automation", count: 8 },
+  { id: "tag-8", name: "Growth", slug: "growth", count: 10 }
+];
+
+export const initialPosts: Post[] = [
+  {
+    id: "post-1",
+    title: "Top 10 Free AI Tools You Must Try in 2026",
+    slug: "top-10-free-ai-tools-you-must-try-in-2026",
+    excerpt: "Supercharge your daily workflow with these revolutionary free AI tools that eliminate repetitive tasks, write clean code, and generate stunning visuals.",
+    featuredImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    category: "ai-tools",
+    categoryName: "AI & Tools",
+    tags: ["Artificial Intelligence", "ChatGPT & Claude", "Automation"],
+    author: {
+      name: "Ubaid Team",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      role: "Lead Tech Editor",
+      bio: "Exploring breakthroughs in artificial intelligence, developer productivity, and computational tools."
+    },
+    publishedAt: "2026-11-01T09:00:00Z",
+    updatedAt: "2026-11-02T14:30:00Z",
+    readingTime: "8 min read",
+    views: 1420,
+    status: "published",
+    isFeatured: true,
+    isTrending: true,
+    seoTitle: "Top 10 Free AI Tools You Must Try in 2026 | UbaidBlogs",
+    seoDescription: "Discover the top 10 completely free AI tools in 2026 to automate workflows, accelerate coding, and create premium multimedia content.",
+    canonicalUrl: "https://ubaidblogs.com/post/top-10-free-ai-tools-you-must-try-in-2026",
+    content: `
+<h2>The Explosive Evolution of AI Tools in 2026</h2>
+<p>Artificial Intelligence has graduated from simple conversational chatbots into autonomous agentic copilots capable of executing complex multi-step workflows. Whether you are a programmer, content creator, SEO specialist, or student, modern free AI tools can multiply your output fivefold without costing a single dollar.</p>
+
+<p>In this curated guide, we test and review the <strong>top 10 free AI tools</strong> that provide extraordinary value in 2026.</p>
+
+<h3>1. Gemini 2.5 Flash & Workspace Integration</h3>
+<p>Google's ultra-fast multimodal model provides massive context windows with instantaneous responses. It excels at parsing long PDFs, video breakdowns, and complex code refactoring right from your browser or Google Docs environment.</p>
+<ul>
+  <li><strong>Best for:</strong> Real-time research, large document synthesis, and automated summarization.</li>
+  <li><strong>Free allowance:</strong> Generous daily request tiers with zero cost on consumer accounts.</li>
+</ul>
+
+<h3>2. Open-Source Local Agents via Ollama</h3>
+<p>If data privacy is paramount, running local AI models on your own machine is now faster and lighter than ever. With Ollama, you can download quantized open-source weights in seconds.</p>
+
+<pre><code class="language-bash"># Run a cutting-edge local coding assistant
+curl -fsSL https://ollama.com/install.sh | sh
+ollama run deepseek-coder:6.7b</code></pre>
+
+<h3>3. Perplexity AI Free Tier</h3>
+<p>Traditional search engines often drown users in sponsored links and low-quality affiliate blogs. Perplexity combines live web search with generative synthesis, complete with inline academic and verified source citations.</p>
+
+<blockquote>
+  "The future of discovery isn't ten blue links; it is synthesized, cited, and actionable intelligence delivered in seconds."
+</blockquote>
+
+<h3>4. Bolt.new & WebContainer AI Builders</h3>
+<p>Rapid prototyping has undergone a complete revolution. You can now prompt a full-stack Next.js or Vite application directly in your browser. The tool creates files, runs an in-memory Node server, and provides an instant preview link.</p>
+
+<h3>Summary Comparison Table</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Tool Name</th>
+      <th>Primary Capability</th>
+      <th>Best Use Case</th>
+      <th>Pricing Tier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gemini Flash</td>
+      <td>Multimodal Large Context</td>
+      <td>Document Analysis & Synthesis</td>
+      <td>100% Free Tier</td>
+    </tr>
+    <tr>
+      <td>Ollama</td>
+      <td>Local Model Inference</td>
+      <td>Offline & Private Coding</td>
+      <td>Free & Open Source</td>
+    </tr>
+    <tr>
+      <td>Perplexity</td>
+      <td>Real-time Cited Search</td>
+      <td>Fact-checking & Research</td>
+      <td>Generous Daily Queries</td>
+    </tr>
+    <tr>
+      <td>Cursor Community</td>
+      <td>AI Code Completion</td>
+      <td>Software Engineering</td>
+      <td>Free Hobby Plan</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Conclusion</h3>
+<p>Adopting even two of these tools into your daily workflow will save dozens of hours each month. Stay tuned to <strong>UbaidBlogs</strong> as we continue benchmarking the latest AI updates throughout 2026!</p>
+`
+  },
+  {
+    id: "post-2",
+    title: "Complete WordPress Beginner Guide 2026",
+    slug: "complete-wordpress-beginner-guide-2026",
+    excerpt: "Learn how to launch a fast, secure, and SEO-friendly WordPress website from scratch in 2026 with modern block themes, headless options, and zero coding required.",
+    featuredImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    category: "web-development",
+    categoryName: "Web Development",
+    tags: ["WordPress 2026", "Frontend", "Growth"],
+    author: {
+      name: "Ubaid Tech",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      role: "Senior Web Architect",
+      bio: "Full-stack developer specializing in Next.js, Headless WordPress, and cloud infrastructure."
+    },
+    publishedAt: "2026-10-30T11:15:00Z",
+    updatedAt: "2026-10-31T08:00:00Z",
+    readingTime: "10 min read",
+    views: 980,
+    status: "published",
+    isFeatured: true,
+    isTrending: false,
+    seoTitle: "Complete WordPress Beginner Guide 2026 | UbaidBlogs",
+    seoDescription: "Step-by-step masterclass on building a professional WordPress website in 2026. Themes, block editor, security, and lightning-fast speed.",
+    canonicalUrl: "https://ubaidblogs.com/post/complete-wordpress-beginner-guide-2026",
+    content: `
+<h2>Why WordPress Still Powers 43% of the Web in 2026</h2>
+<p>Despite the proliferation of modern static site generators and SaaS site builders, WordPress remains the undisputed king of web publishing. With the maturation of Full Site Editing (FSE), Block Themes, and the WordPress REST API, launching a dynamic site has never been more flexible.</p>
+
+<h3>Step 1: Choosing High-Performance Hosting</h3>
+<p>Avoid legacy shared hosting with congested CPU cores. In 2026, managed cloud instances on AWS Lightsail, Hetzner, or DigitalOcean paired with LiteSpeed Web Server deliver sub-50ms TTFB (Time to First Byte).</p>
+
+<h3>Step 2: Embracing Block Themes & Gutenberg</h3>
+<p>Heavy page builders like older versions of Elementor and Divi often introduced code bloat. Today's modern block themes compile near-zero runtime JavaScript, guaranteeing 100/100 Core Web Vitals scores right out of the box.</p>
+
+<pre><code class="language-php">// Example: Enabling custom block styles in functions.php
+function ubaid_register_block_styles() {
+    register_block_style('core/quote', [
+        'name'  => 'gold-accent',
+        'label' => __('Gold Accent Quote', 'ubaidblogs'),
+    ]);
+}
+add_action('init', 'ubaid_register_block_styles');</code></pre>
+
+<h3>Step 3: Essential 2026 Security Checklist</h3>
+<ul>
+  <li>Enforce Two-Factor Authentication (2FA) for all administrator accounts.</li>
+  <li>Change default login paths to prevent automated credential stuffing.</li>
+  <li>Use Cloudflare CDN with Web Application Firewall (WAF) enabled.</li>
+  <li>Keep PHP runtime updated to version 8.3 or higher.</li>
+</ul>
+
+<h3>Final Thoughts</h3>
+<p>By following these best practices, your WordPress installation will stay secure, blisteringly fast, and prepared for future scalability.</p>
+`
+  },
+  {
+    id: "post-3",
+    title: "Advanced SEO Strategy for Higher Rankings",
+    slug: "advanced-seo-strategy-for-higher-rankings",
+    excerpt: "Uncover data-driven SEO techniques that dominate Google's AI Overviews and traditional SERPs through semantic topic clusters and technical excellence.",
+    featuredImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    category: "seo",
+    categoryName: "SEO",
+    tags: ["Technical SEO", "Growth", "Artificial Intelligence"],
+    author: {
+      name: "Ubaid Team",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      role: "Lead Tech Editor",
+      bio: "Exploring breakthroughs in artificial intelligence, developer productivity, and computational tools."
+    },
+    publishedAt: "2026-10-29T14:00:00Z",
+    updatedAt: "2026-10-29T18:20:00Z",
+    readingTime: "7 min read",
+    views: 1250,
+    status: "published",
+    isFeatured: true,
+    isTrending: true,
+    seoTitle: "Advanced SEO Strategy for Higher Rankings 2026 | UbaidBlogs",
+    seoDescription: "Proven technical and semantic SEO strategies to rank higher in Google search results and AI-generated snapshots in 2026.",
+    canonicalUrl: "https://ubaidblogs.com/post/advanced-seo-strategy-for-higher-rankings",
+    content: `
+<h2>The Paradigm Shift in Search Engine Optimization</h2>
+<p>The traditional SEO playbook of keyword stuffing and generic backlink acquisition is dead. With Google's Search Generative Experience (SGE) and AI Overviews answering direct queries, publishers must pivot toward <strong>Information Gain</strong>, semantic entity relationships, and authoritativeness.</p>
+
+<h3>1. Semantic Topic Clusters vs. Isolated Keywords</h3>
+<p>Instead of creating fifty shallow articles targeting slightly different variations of a query, modern SEO demands a centralized Pillar Page supported by deep, interconnected cluster nodes. Internal links pass contextual entity weight throughout your domain.</p>
+
+<h3>2. Optimizing for AI Overviews & Citations</h3>
+<p>How do you ensure your content is cited by LLMs when they generate answers for users?</p>
+<ul>
+  <li>Include concise, direct definitions in the first 60 words of each section.</li>
+  <li>Use clean structured tables and ordered lists that AI parsers can easily digest.</li>
+  <li>Embed original primary data, code examples, or proprietary case study results.</li>
+</ul>
+
+<pre><code class="language-json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Advanced SEO Strategy for Higher Rankings",
+  "author": {
+    "@type": "Organization",
+    "name": "UbaidBlogs"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "UbaidBlogs"
+  }
+}</code></pre>
+
+<h3>3. Flawless Core Web Vitals (INP, LCP, CLS)</h3>
+<p>Interaction to Next Paint (INP) has replaced FID as a primary ranking signal. Reducing heavy main-thread JavaScript execution ensures instant UI response and prevents algorithmic ranking penalties.</p>
+`
+  },
+  {
+    id: "post-4",
+    title: "How to Build an AI Chatbot for Your Website",
+    slug: "how-to-build-an-ai-chatbot-for-your-website",
+    excerpt: "Step-by-step tutorial on building a custom AI chatbot with Retrieval-Augmented Generation (RAG), Next.js, and Vector Databases in under an hour.",
+    featuredImage: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80",
+    category: "ai-tools",
+    categoryName: "AI & Tools",
+    tags: ["Artificial Intelligence", "Next.js", "Frontend"],
+    author: {
+      name: "Ubaid Tech",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      role: "Senior Web Architect",
+      bio: "Full-stack developer specializing in Next.js, Headless WordPress, and cloud infrastructure."
+    },
+    publishedAt: "2026-10-28T16:45:00Z",
+    readingTime: "6 min read",
+    views: 890,
+    status: "published",
+    isFeatured: false,
+    isTrending: true,
+    seoTitle: "How to Build an AI Chatbot for Your Website | UbaidBlogs",
+    seoDescription: "Learn how to build and embed a smart RAG-powered chatbot on any website using Next.js, OpenAI API, and vector search.",
+    canonicalUrl: "https://ubaidblogs.com/post/how-to-build-an-ai-chatbot-for-your-website",
+    content: `
+<h2>Why Every Website Needs an Intelligent AI Copilot</h2>
+<p>Static search boxes often fail users when they ask conversational questions. By connecting your blog articles, documentation, or product catalog to a vector database, your visitors can converse directly with your site's knowledge base.</p>
+
+<h3>The Architecture: RAG in 3 Steps</h3>
+<ol>
+  <li><strong>Chunking & Embeddings:</strong> Split your markdown articles into 500-token chunks and generate vector embeddings using text-embedding-3-small.</li>
+  <li><strong>Semantic Search:</strong> When a user asks a question, retrieve the top 3 most relevant chunks based on cosine similarity.</li>
+  <li><strong>Streaming Generation:</strong> Feed the retrieved context to an LLM to generate an accurate, grounded answer with zero hallucinations.</li>
+</ol>
+
+<pre><code class="language-typescript">import { OpenAI } from 'openai';
+
+export async function generateAnswer(userQuery: string, context: string) {
+  const openai = new OpenAI();
+  const response = await openai.chat.completions.create({
+    model: 'gpt-4o-mini',
+    messages: [
+      { role: 'system', content: 'You are an assistant for UbaidBlogs. Answer solely using the provided context.' },
+      { role: 'user', content: \`Context: \${context}\\n\\nQuestion: \${userQuery}\` }
+    ],
+    temperature: 0.2,
+  });
+  return response.choices[0].message.content;
+}</code></pre>
+`
+  },
+  {
+    id: "post-5",
+    title: "Best SEO Plugins for WordPress in 2026",
+    slug: "best-seo-plugins-for-wordpress-in-2026",
+    excerpt: "We benchmarked Rank Math, Yoast SEO, SEOPress, and The SEO Framework to discover which plugin generates the cleanest schema and fastest page speeds.",
+    featuredImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    category: "wordpress",
+    categoryName: "WordPress",
+    tags: ["WordPress 2026", "Technical SEO"],
+    author: {
+      name: "Ubaid Team",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      role: "Lead Tech Editor",
+      bio: "Exploring breakthroughs in artificial intelligence, developer productivity, and computational tools."
+    },
+    publishedAt: "2026-10-27T10:00:00Z",
+    readingTime: "5 min read",
+    views: 1110,
+    status: "published",
+    isFeatured: false,
+    isTrending: true,
+    seoTitle: "Best SEO Plugins for WordPress in 2026 | UbaidBlogs",
+    seoDescription: "Compare the best WordPress SEO plugins of 2026. Detailed speed tests, schema markup support, and feature breakdowns.",
+    canonicalUrl: "https://ubaidblogs.com/post/best-seo-plugins-for-wordpress-in-2026",
+    content: `
+<h2>Choosing the Right SEO Tool for Your WordPress Site</h2>
+<p>An SEO plugin will not automatically rank your site, but it provides the essential technical foundation: XML sitemaps, JSON-LD schema graphs, Open Graph tags, and canonical URL enforcement.</p>
+
+<h3>1. Rank Math SEO</h3>
+<p>Rank Math continues to dominate due to its modern modular architecture. Features like instant IndexNow submission, built-in schema builders, and internal link suggestions make it a power user favorite.</p>
+
+<h3>2. The SEO Framework</h3>
+<p>For purists who demand zero database clutter and zero advertising banners in the admin panel, The SEO Framework is the cleanest, most lightweight plugin available on WordPress.org.</p>
+`
+  },
+  {
+    id: "post-6",
+    title: "Next.js 14 App Router: Production Best Practices",
+    slug: "nextjs-14-app-router-production-best-practices",
+    excerpt: "Master server components, streaming SSR, parallel routes, and cache invalidation strategies for blazing fast enterprise React applications.",
+    featuredImage: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1200&q=80",
+    category: "web-development",
+    categoryName: "Web Development",
+    tags: ["Next.js", "Frontend"],
+    author: {
+      name: "Ubaid Tech",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      role: "Senior Web Architect",
+      bio: "Full-stack developer specializing in Next.js, Headless WordPress, and cloud infrastructure."
+    },
+    publishedAt: "2026-10-25T13:20:00Z",
+    readingTime: "9 min read",
+    views: 740,
+    status: "published",
+    isFeatured: false,
+    isTrending: false,
+    seoTitle: "Next.js 14 App Router Production Best Practices | UbaidBlogs",
+    seoDescription: "Architect resilient and blazingly fast Next.js applications using Server Components, Streaming, and Route Handlers.",
+    canonicalUrl: "https://ubaidblogs.com/post/nextjs-14-app-router-production-best-practices",
+    content: `
+<h2>The Shift to React Server Components (RSC)</h2>
+<p>React Server Components represent the most significant paradigm shift in frontend architecture in a decade. By executing component logic exclusively on the server, you ship zero kilobytes of React bundle code for read-only UI segments.</p>
+
+<h3>Best Practice: Keep Client Leaves at the Edges</h3>
+<p>Never place \`'use client'\` at the top of a page layout. Instead, push client boundaries down to the smallest interactive atoms (such as a search button or like counter), keeping the parent hierarchy fully server-rendered.</p>
+`
+  }
+];
+

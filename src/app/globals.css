@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #07090D;
+  --surface: #11151C;
+  --foreground: #F5F7FA;
+  --gold: #FFD21F;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #F5F7FA;
+  background-color: #07090D;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom modern dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0D14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202736;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD21F;
+}
+
+/* Gold selection */
+::selection {
+  background: rgba(255, 210, 31, 0.3);
+  color: #FFD21F;
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gold-text-gradient {
+    background: linear-gradient(135deg, #FFF099 0%, #FFD21F 50%, #E5B608 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gold-border-glow {
+    border-color: rgba(255, 210, 31, 0.35);
+    box-shadow: 0 0 15px -3px rgba(255, 210, 31, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(20, 24, 34, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+}
