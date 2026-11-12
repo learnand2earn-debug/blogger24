@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#168CFF]/10 rounded-full blur-[120px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Left Column: Headline, Badge, Description, CTAs */}

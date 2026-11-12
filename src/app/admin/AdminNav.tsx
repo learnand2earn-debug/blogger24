@@ -44,7 +44,7 @@ export const AdminNav: React.FC = () => {
 
   return (
     <nav className="w-full bg-[#0B0E14] border-b border-[#1C2538] sticky top-0 z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between gap-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-3 flex items-center justify-between gap-4">
         {/* Brand & Badge */}
         <div className="flex items-center gap-4">
           <Logo size="sm" showTagline={false} />

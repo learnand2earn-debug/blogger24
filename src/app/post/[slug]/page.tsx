@@ -143,7 +143,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
       <div className="w-full bg-[#07090D] min-h-screen">
         {/* Breadcrumbs Navigation */}
         <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 overflow-x-auto no-scrollbar">
               <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
                 <Home className="w-3.5 h-3.5" />
@@ -160,7 +160,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
         </div>
 
         {/* Article Container */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-8 py-10">
+        <main className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             
             {/* Article Main Column (8 cols) */}
@@ -226,6 +226,26 @@ export default function ArticleDetailPage({ params }: PageProps) {
                   className="w-full h-full object-cover"
                 />
               </div>
+
+              {/* Extra Front / Gallery Images if uploaded */}
+              {post.galleryImages && post.galleryImages.length > 0 && (
+                <div className="flex flex-col gap-2 p-4 rounded-2xl bg-[#0E131E] border border-[#1E273A]">
+                  <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                    Article Image Gallery:
+                  </span>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {post.galleryImages.map((img, idx) => (
+                      <div key={idx} className="rounded-xl overflow-hidden aspect-video border border-[#222E44] bg-[#0A0D14] shadow-md group">
+                        <img
+                          src={img}
+                          alt={`${post.title} Gallery ${idx + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Interactive Module: Table of Contents & Sharing */}
               <ArticleInteractive post={post} headings={headings} />

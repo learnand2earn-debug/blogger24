@@ -12,7 +12,7 @@ export default function DisclaimerPage() {
   return (
     <div className="w-full bg-[#07090D] min-h-screen">
       <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400">
             <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
               <Home className="w-3.5 h-3.5" />

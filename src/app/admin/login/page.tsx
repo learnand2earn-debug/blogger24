@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Lock, ArrowRight, Loader2, AlertCircle, ShieldCheck } from 'lucide-react';
+import { Lock, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 
 export default function AdminLoginPage() {
@@ -101,17 +101,8 @@ export default function AdminLoginPage() {
               )}
             </button>
           </form>
-
-          {/* Dev / Testing Credentials Hint */}
-          <div className="mt-6 pt-5 border-t border-[#1C2538] text-[11px] text-gray-400 text-center">
-            <span className="text-gray-500 block mb-1">Default Configuration Key:</span>
-            <code className="px-2.5 py-1 rounded bg-[#0A0D14] border border-[#1E2536] text-[#FFD21F] font-mono select-all">
-              UbaidAdmin2026!
-            </code>
-          </div>
         </div>
       </div>
     </div>
   );
 }
-

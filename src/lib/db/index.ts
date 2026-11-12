@@ -212,6 +212,8 @@ export const db = {
       excerpt: newPostData.excerpt || "",
       content: newPostData.content || "",
       featuredImage: newPostData.featuredImage || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+      galleryImages: newPostData.galleryImages || [],
+      blocks: newPostData.blocks || [],
       category: newPostData.category || "technology",
       categoryName: categoryObj ? categoryObj.name : "Technology",
       tags: newPostData.tags || ["Technology"],

@@ -121,8 +121,8 @@ export const Header: React.FC = () => {
   return (
     <header className="w-full z-50 sticky top-0 transition-all duration-300">
       {/* 1. Slim Announcement Bar */}
-      <div className="bg-[#0B0E14] border-b border-[#1A202C] text-xs py-2 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div className="bg-[#0B0E14] border-b border-[#1A202C] text-xs py-2 px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
           {/* Announcement text */}
           <div className="flex items-center gap-2 text-gray-300">
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FFD21F]/20 text-[#FFD21F]">
@@ -209,7 +209,7 @@ export const Header: React.FC = () => {
             : 'bg-[#07090D] border-b border-[#151A24]'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between gap-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-3.5 flex items-center justify-between gap-4">
           <Logo size="md" />
 
           {/* Desktop Navigation */}

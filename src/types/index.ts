@@ -5,6 +5,33 @@ export interface Author {
   bio?: string;
 }
 
+export type BlockType =
+  | 'paragraph'
+  | 'heading2'
+  | 'heading3'
+  | 'image'
+  | 'gallery'
+  | 'list'
+  | 'quote'
+  | 'callout';
+
+export interface GalleryItem {
+  url: string;
+  caption?: string;
+}
+
+export interface ContentBlock {
+  id: string;
+  type: BlockType;
+  content: string;
+  url?: string;
+  caption?: string;
+  alt?: string;
+  images?: GalleryItem[];
+  items?: string[];
+  calloutType?: 'info' | 'tip' | 'warning';
+}
+
 export interface Post {
   id: string;
   title: string;
@@ -12,6 +39,8 @@ export interface Post {
   excerpt: string;
   content: string;
   featuredImage: string;
+  galleryImages?: string[];
+  blocks?: ContentBlock[];
   category: string; // slug
   categoryName: string;
   tags: string[];
@@ -91,4 +120,3 @@ export interface SiteSettings {
   allowComments: boolean;
   allowNewsletter: boolean;
 }
-

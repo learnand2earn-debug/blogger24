@@ -38,7 +38,7 @@ export default function TagArchivePage({ params, searchParams }: TagPageProps) {
     <div className="w-full bg-[#07090D] min-h-screen">
       {/* Breadcrumbs */}
       <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400">
             <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
               <Home className="w-3.5 h-3.5" />
@@ -52,7 +52,7 @@ export default function TagArchivePage({ params, searchParams }: TagPageProps) {
         </div>
       </div>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-8 py-10">
+      <main className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-10">
         <div className="rounded-2xl bg-[#111622] border border-[#1C2538] p-8 mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFD21F]/15 text-[#FFD21F] text-xs font-bold mb-3">
             <Tag className="w-3.5 h-3.5" />

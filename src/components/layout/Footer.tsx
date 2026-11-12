@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
       <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#161D2B]">
           
