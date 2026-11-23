@@ -276,3 +276,4 @@ appendSectionBeforeFAQ('post-21', p21Boost);
 
 fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'utf8');
 console.log('Final targeted boosts applied successfully!');
+

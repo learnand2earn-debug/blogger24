@@ -18,62 +18,55 @@ export const CategoryShortcuts: React.FC = () => {
       href: "/category/ai-tools",
       icon: Bot,
       color: "#FFD21F",
-      count: "24",
+      count: "3 Guides",
     },
     {
       label: "Web Development",
       href: "/category/web-development",
       icon: Code2,
       color: "#168CFF",
-      count: "20",
+      count: "Masterclass",
     },
     {
-      label: "SEO",
+      label: "SEO Mastery",
       href: "/category/seo",
       icon: TrendingUp,
       color: "#10B981",
-      count: "18",
+      count: "3 Guides",
     },
     {
       label: "Digital Marketing",
       href: "/category/digital-marketing",
       icon: Megaphone,
       color: "#EC4899",
-      count: "16",
+      count: "2 Guides",
     },
     {
-      label: "WordPress",
-      href: "/category/wordpress",
-      icon: Globe,
-      color: "#3B82F6",
-      count: "14",
-    },
-    {
-      label: "Technology",
+      label: "Technology & Cloud",
       href: "/category/technology",
       icon: Cpu,
       color: "#8B5CF6",
-      count: "12",
+      count: "3 Guides",
     },
     {
-      label: "Productivity",
+      label: "Productivity & Health",
       href: "/category/productivity",
       icon: Zap,
       color: "#F59E0B",
-      count: "9",
+      count: "3 Guides",
     },
     {
-      label: "More Topics",
+      label: "All Masterclasses",
       href: "/categories",
       icon: LayoutGrid,
       color: "#FFD21F",
-      count: "All",
+      count: "15 Posts",
     },
   ];
 
   return (
     <div className="w-full bg-[#0A0D14] border-b border-[#181F2C] py-4">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
         <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-1">
           {shortcuts.map((item) => {
             const Icon = item.icon;

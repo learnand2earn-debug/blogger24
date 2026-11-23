@@ -13,10 +13,11 @@ export const metadata: Metadata = {
   keywords: [
     'UbaidBlogs',
     'AI Tools 2026',
-    'Next.js Tutorials',
-    'SEO Strategies',
+    'Autonomous AI Agents',
+    'Next.js 15 Tutorials',
+    'Programmatic SEO',
     'Web Development',
-    'WordPress Guide',
+    'Cybersecurity Architecture',
     'Digital Marketing'
   ],
   authors: [{ name: 'UbaidBlogs Team' }],

@@ -8,8 +8,8 @@ import {
   Code2,
   TrendingUp,
   Megaphone,
-  Globe,
   Cpu,
+  Zap,
   LucideIcon
 } from 'lucide-react';
 import { Category, Post } from '@/types';
@@ -36,8 +36,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     'web-development': Code2,
     'seo': TrendingUp,
     'digital-marketing': Megaphone,
-    'wordpress': Globe,
-    'technology': Cpu
+    'technology': Cpu,
+    'productivity': Zap
   };
 
   return (

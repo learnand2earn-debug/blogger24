@@ -21,7 +21,7 @@ export default function HomePage() {
 
   // Fetch latest posts
   const { posts: latestPosts } = db.getPosts({
-    limit: 4,
+    limit: 6,
     status: 'published',
     sort: 'newest'
   });
@@ -29,7 +29,7 @@ export default function HomePage() {
   // Fetch trending posts
   const { posts: trendingPosts } = db.getPosts({
     trending: true,
-    limit: 2,
+    limit: 4,
     status: 'published',
     sort: 'popular'
   });
@@ -43,7 +43,7 @@ export default function HomePage() {
       <CategoryShortcuts />
 
       {/* 3. Main Content Area */}
-      <main className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-10 w-full">
+      <main className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           
           {/* Main Left Content Stream (8 columns on desktop) */}

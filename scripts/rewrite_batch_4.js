@@ -805,3 +805,4 @@ updatePost('post-18', post18Content, '15 min read');
 
 fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'utf8');
 console.log('Batch 4 updated successfully with ~3,000 words!');
+

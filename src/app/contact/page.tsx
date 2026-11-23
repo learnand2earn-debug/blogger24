@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className="w-full bg-[#07090D] min-h-screen">
       {/* Breadcrumbs */}
       <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400">
             <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
               <Home className="w-3.5 h-3.5" />
@@ -26,7 +26,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-8 py-14">
+      <main className="w-full max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-8 py-14">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFD21F]/15 border border-[#FFD21F]/40 text-[#FFD21F] text-xs font-bold mb-4">
             <MessageCircle className="w-3.5 h-3.5" />

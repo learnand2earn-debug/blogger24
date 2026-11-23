@@ -100,32 +100,95 @@ export default function ArticleDetailPage({ params }: PageProps) {
     modifiedContent = modifiedContent.replace(originalTag, newTag);
   }
 
-  // Structured Data Schema (JSON-LD)
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    image: [post.featuredImage],
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt || post.publishedAt,
-    author: {
-      '@type': 'Person',
-      name: post.author.name,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'UbaidBlogs',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://ubaidblogs.com/favicon.ico',
+  // Structured Data Schema (JSON-LD Graph for Google, Perplexity, Gemini, ChatGPT Search)
+  const schemas: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      image: [post.featuredImage],
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt || post.publishedAt,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://ubaidblogs.com/post/${post.slug}`,
+      },
+      author: {
+        '@type': 'Person',
+        name: post.author.name,
+        jobTitle: post.author.role,
+        url: 'https://ubaidblogs.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'UbaidBlogs',
+        url: 'https://ubaidblogs.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://ubaidblogs.com/favicon.ico',
+        },
+      },
+      keywords: post.tags?.join(', ') || '',
+      articleSection: post.categoryName,
+      inLanguage: 'en-US',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.aeo-quick-answer', 'h1', '.article-body p:first-of-type'],
       },
     },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://ubaidblogs.com/post/${post.slug}`,
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://ubaidblogs.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: post.categoryName,
+          item: `https://ubaidblogs.com/category/${post.category}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: post.title,
+          item: `https://ubaidblogs.com/post/${post.slug}`,
+        },
+      ],
     },
-  };
+  ];
+
+  // Dynamic FAQ extraction for AEO Rich Snippets
+  const faqItems: { question: string; answer: string }[] = [];
+  const faqRegex = /<h3>(?:Q\d*[:\.\s]*|FAQ\d*[:\.\s]*|Question[:\.\s]*)*(What|How|Why|Is|Can|Should|Where|Which|Do|Does|Could|Are|Will)(.*?)<\/h3>\s*<p>(.*?)<\/p>/gi;
+  let faqMatch;
+  while ((faqMatch = faqRegex.exec(post.content)) !== null) {
+    const question = (faqMatch[1] + faqMatch[2]).replace(/<[^>]*>/g, '').trim();
+    const answer = faqMatch[3].replace(/<[^>]*>/g, '').trim();
+    if (question && answer && question.length > 10) {
+      faqItems.push({ question, answer });
+    }
+  }
+
+  if (faqItems.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    });
+  }
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
     month: 'long',
@@ -135,15 +198,18 @@ export default function ArticleDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {schemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       <div className="w-full bg-[#07090D] min-h-screen">
         {/* Breadcrumbs Navigation */}
         <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 overflow-x-auto no-scrollbar">
               <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
                 <Home className="w-3.5 h-3.5" />
@@ -160,7 +226,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
         </div>
 
         {/* Article Container */}
-        <main className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-10">
+        <main className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 py-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             
             {/* Article Main Column (8 cols) */}
