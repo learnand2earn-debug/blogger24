@@ -67,24 +67,29 @@ export const CategoryShortcuts: React.FC = () => {
   return (
     <div className="w-full bg-[#0A0D14] border-b border-[#181F2C] py-4">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-        <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-1">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-3 w-full">
           {shortcuts.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 key={item.label}
                 href={item.href}
-                className="group shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#111622] hover:bg-[#182030] border border-[#1E2738] hover:border-[#FFD21F]/50 transition-all duration-200"
+                className="group flex items-center justify-between sm:justify-start gap-2.5 px-3.5 py-2.5 rounded-xl bg-[#111622] hover:bg-[#182030] border border-[#1E2738] hover:border-[#FFD21F]/60 shadow-sm hover:shadow-[0_8px_20px_-4px_rgba(255,210,31,0.25)] hover:-translate-y-1 transition-all duration-300 w-full"
               >
                 <div
-                  className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-transform group-hover:scale-110"
+                  className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-6"
                   style={{ backgroundColor: `${item.color}18`, color: item.color }}
                 >
                   <Icon className="w-4 h-4" />
                 </div>
-                <span className="text-xs sm:text-sm font-semibold text-gray-200 group-hover:text-white whitespace-nowrap">
-                  {item.label}
-                </span>
+                <div className="flex flex-col min-w-0">
+                  <span className="text-xs sm:text-sm font-semibold text-gray-200 group-hover:text-white truncate">
+                    {item.label}
+                  </span>
+                  <span className="text-[10px] text-gray-500 group-hover:text-[#FFD21F] transition-colors">
+                    {item.count}
+                  </span>
+                </div>
               </Link>
             );
           })}

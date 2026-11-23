@@ -125,7 +125,7 @@ export const Header: React.FC = () => {
         <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 flex flex-col md:flex-row items-center justify-between gap-2">
           {/* Announcement text */}
           <div className="flex items-center gap-2 text-gray-300">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FFD21F]/20 text-[#FFD21F]">
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FFD21F]/20 text-[#FFD21F] animate-bounce-subtle">
               🚀
             </span>
             <span className="font-medium">
@@ -156,7 +156,7 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="hover:text-[#1877F2] transition-colors"
+                className="hover:text-[#1877F2] hover:scale-125 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <FacebookIcon className="w-3.5 h-3.5" />
               </a>
@@ -165,7 +165,7 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="hover:text-[#FF0000] transition-colors"
+                className="hover:text-[#FF0000] hover:scale-125 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <YoutubeIcon className="w-3.5 h-3.5" />
               </a>
@@ -174,7 +174,7 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X / Twitter"
-                className="hover:text-white transition-colors"
+                className="hover:text-white hover:scale-125 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <TwitterIcon className="w-3.5 h-3.5" />
               </a>
@@ -183,7 +183,7 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="hover:text-[#0A66C2] transition-colors"
+                className="hover:text-[#0A66C2] hover:scale-125 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <LinkedinIcon className="w-3.5 h-3.5" />
               </a>
@@ -192,7 +192,7 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="hover:text-[#E4405F] transition-colors"
+                className="hover:text-[#E4405F] hover:scale-125 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <InstagramIcon className="w-3.5 h-3.5" />
               </a>

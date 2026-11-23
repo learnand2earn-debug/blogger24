@@ -30,6 +30,20 @@ export const ArticleInteractive: React.FC<ArticleInteractiveProps> = ({
   const [content, setContent] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [commentStatus, setCommentStatus] = useState<string | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Dynamic Scroll Progress Bar calculation
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const currentProgress = (window.scrollY / totalHeight) * 100;
+        setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // 1. Record view count on mount
   useEffect(() => {
@@ -122,7 +136,14 @@ export const ArticleInteractive: React.FC<ArticleInteractiveProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-10">
+    <>
+      {/* Sticky Dynamic Reading Progress Bar at top of screen */}
+      <div
+        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-[#FFD21F] via-[#FFE55C] to-[#168CFF] z-[100] transition-all duration-150 shadow-[0_0_12px_rgba(255,210,31,0.8)] pointer-events-none"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
+      <div className="flex flex-col gap-10">
       {/* Table of Contents (if headings exist) */}
       {headings.length > 0 && (
         <nav aria-label="Table of contents" className="rounded-2xl bg-[#0F131D] border border-[#1F2738] p-5">
@@ -315,5 +336,6 @@ export const ArticleInteractive: React.FC<ArticleInteractiveProps> = ({
         </div>
       </section>
     </div>
+    </>
   );
 };

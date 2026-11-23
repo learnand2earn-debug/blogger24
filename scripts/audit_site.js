@@ -39,3 +39,4 @@ db.categories.forEach(c => {
 if (!hasErrors) {
   console.log('\nSUCCESS: ALL 15 POSTS VALIDATED! >= 3000 words, valid categories, valid fields!');
 }
+

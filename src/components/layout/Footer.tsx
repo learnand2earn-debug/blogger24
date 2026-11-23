@@ -16,9 +16,9 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="relative w-full bg-[#05070A] border-t border-[#161D2B] text-gray-400 overflow-hidden pt-14 pb-8">
-      {/* Golden subtle ambient light ribbons in background */}
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      {/* Golden subtle ambient light ribbons in background with fluid animation */}
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-aurora" />
+      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#168CFF]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-aurora" style={{ animationDelay: '3.5s' }} />
 
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Main Footer Grid */}
@@ -34,14 +34,14 @@ export const Footer: React.FC = () => {
               Your ultimate destination for AI, Web Development, SEO and Digital Marketing. Let&apos;s build a smarter future together.
             </p>
 
-            {/* Social Icons */}
+            {/* Social Icons with spring hover animations */}
             <div className="flex items-center gap-3 text-gray-400">
               <a
                 href="https://facebook.com/ubaidblogs"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#1877F2] hover:text-[#1877F2] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#1877F2] hover:text-[#1877F2] hover:scale-125 hover:-translate-y-0.5 flex items-center justify-center transition-all duration-200"
               >
                 <FacebookIcon className="w-3.5 h-3.5" />
               </a>
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#FF0000] hover:text-[#FF0000] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#FF0000] hover:text-[#FF0000] hover:scale-125 hover:-translate-y-0.5 flex items-center justify-center transition-all duration-200"
               >
                 <YoutubeIcon className="w-3.5 h-3.5" />
               </a>
@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X / Twitter"
-                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-white hover:text-white flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-white hover:text-white hover:scale-125 hover:-translate-y-0.5 flex items-center justify-center transition-all duration-200"
               >
                 <TwitterIcon className="w-3.5 h-3.5" />
               </a>
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#0A66C2] hover:text-[#0A66C2] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#0A66C2] hover:text-[#0A66C2] hover:scale-125 hover:-translate-y-0.5 flex items-center justify-center transition-all duration-200"
               >
                 <LinkedinIcon className="w-3.5 h-3.5" />
               </a>
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#E4405F] hover:text-[#E4405F] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-[#121622] border border-[#222A3A] hover:border-[#E4405F] hover:text-[#E4405F] hover:scale-125 hover:-translate-y-0.5 flex items-center justify-center transition-all duration-200"
               >
                 <InstagramIcon className="w-3.5 h-3.5" />
               </a>
@@ -153,9 +153,9 @@ export const Footer: React.FC = () => {
         {/* Bottom Copyright Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
           <p>© {currentYear} UbaidBlogs. All Rights Reserved.</p>
-          <p className="flex items-center gap-1">
+          <p className="flex items-center gap-1.5">
             <span>Made with</span>
-            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 animate-heartbeat" />
             <span>by <strong className="text-gray-300 font-bold">UbaidBlogs</strong> | Dream Big, Build Smart</span>
           </p>
         </div>

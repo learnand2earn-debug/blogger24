@@ -56,7 +56,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="h-10 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] border border-[#1877F2]/30 text-[#1877F2] hover:text-white flex items-center justify-center transition-all hover:scale-105"
+            className="h-10 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] border border-[#1877F2]/30 text-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-115 hover:-translate-y-0.5 shadow-sm"
           >
             <FacebookIcon className="w-4 h-4" />
           </a>
@@ -65,7 +65,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
-            className="h-10 rounded-xl bg-[#FF0000]/10 hover:bg-[#FF0000] border border-[#FF0000]/30 text-[#FF0000] hover:text-white flex items-center justify-center transition-all hover:scale-105"
+            className="h-10 rounded-xl bg-[#FF0000]/10 hover:bg-[#FF0000] border border-[#FF0000]/30 text-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-115 hover:-translate-y-0.5 shadow-sm"
           >
             <YoutubeIcon className="w-4 h-4" />
           </a>
@@ -74,7 +74,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X / Twitter"
-            className="h-10 rounded-xl bg-white/10 hover:bg-white border border-white/20 text-white hover:text-black flex items-center justify-center transition-all hover:scale-105"
+            className="h-10 rounded-xl bg-white/10 hover:bg-white border border-white/20 text-white hover:text-black flex items-center justify-center transition-all duration-200 hover:scale-115 hover:-translate-y-0.5 shadow-sm"
           >
             <TwitterIcon className="w-4 h-4" />
           </a>
@@ -83,7 +83,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="h-10 rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2] border border-[#0A66C2]/30 text-[#0A66C2] hover:text-white flex items-center justify-center transition-all hover:scale-105"
+            className="h-10 rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2] border border-[#0A66C2]/30 text-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-115 hover:-translate-y-0.5 shadow-sm"
           >
             <LinkedinIcon className="w-4 h-4" />
           </a>
@@ -92,7 +92,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="h-10 rounded-xl bg-[#E4405F]/10 hover:bg-[#E4405F] border border-[#E4405F]/30 text-[#E4405F] hover:text-white flex items-center justify-center transition-all hover:scale-105"
+            className="h-10 rounded-xl bg-[#E4405F]/10 hover:bg-[#E4405F] border border-[#E4405F]/30 text-[#E4405F] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-115 hover:-translate-y-0.5 shadow-sm"
           >
             <InstagramIcon className="w-4 h-4" />
           </a>

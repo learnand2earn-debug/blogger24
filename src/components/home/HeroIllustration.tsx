@@ -2,9 +2,10 @@ import React from 'react';
 
 export const HeroIllustration: React.FC = () => {
   return (
-    <div className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl flex items-center justify-center select-none ml-auto">
-      {/* Background ambient glow aura */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-[#FFD21F]/15 via-transparent to-[#168CFF]/15 blur-3xl -z-10 rounded-full animate-pulse-slow" />
+    <div className="relative w-full max-w-2xl xl:max-w-3xl 2xl:max-w-4xl flex items-center justify-center select-none ml-auto">
+      {/* Background ambient glow aura (User's exact requested snippet + multi-layered animated Aurora) */}
+      <div className="absolute -inset-4 bg-gradient-to-r from-[#FFD21F]/15 via-transparent to-[#168CFF]/15 blur-3xl -z-10 rounded-full animate-pulse-slow pointer-events-none" />
+      <div className="absolute -inset-8 bg-gradient-to-r from-[#FFD21F]/20 via-[#168CFF]/20 to-[#FFD21F]/20 blur-3xl -z-10 rounded-full animate-aurora pointer-events-none" />
 
       <svg
         viewBox="0 0 680 440"
@@ -90,15 +91,15 @@ export const HeroIllustration: React.FC = () => {
         />
 
         {/* --- Floating Sparkles / Particles --- */}
-        <circle cx="80" cy="110" r="2.5" fill="#FFD21F" opacity="0.8" />
-        <circle cx="230" cy="80" r="3.5" fill="#FFF285" opacity="0.9" filter="url(#goldGlow)" />
-        <circle cx="340" cy="50" r="2" fill="#FFD21F" opacity="0.7" />
-        <circle cx="490" cy="70" r="3" fill="#FFF285" opacity="0.85" filter="url(#goldGlow)" />
-        <circle cx="630" cy="120" r="2.5" fill="#168CFF" opacity="0.8" />
-        <circle cx="650" cy="240" r="2" fill="#FFD21F" opacity="0.7" />
+        <circle cx="80" cy="110" r="2.5" fill="#FFD21F" className="animate-sparkle" style={{ animationDelay: '0.4s' }} />
+        <circle cx="230" cy="80" r="3.5" fill="#FFF285" filter="url(#goldGlow)" className="animate-sparkle" style={{ animationDelay: '1.2s' }} />
+        <circle cx="340" cy="50" r="2" fill="#FFD21F" className="animate-sparkle" style={{ animationDelay: '2s' }} />
+        <circle cx="490" cy="70" r="3" fill="#FFF285" filter="url(#goldGlow)" className="animate-sparkle" style={{ animationDelay: '0.8s' }} />
+        <circle cx="630" cy="120" r="2.5" fill="#168CFF" className="animate-sparkle" style={{ animationDelay: '1.6s' }} />
+        <circle cx="650" cy="240" r="2" fill="#FFD21F" className="animate-sparkle" style={{ animationDelay: '2.4s' }} />
 
         {/* --- Floating Tech Badge on Left (Balances composition) --- */}
-        <g transform="translate(65, 130)">
+        <g transform="translate(65, 130)" className="animate-float-reverse">
           <rect
             x="0"
             y="0"
@@ -183,9 +184,11 @@ export const HeroIllustration: React.FC = () => {
           />
           {/* Gold mini U on mug */}
           <polygon points="11,13 15,13 15,22 21,22 21,13 25,13 25,25 11,25" fill="#FFD21F" />
-          {/* Steam curls */}
-          <path d="M 12 -4 Q 10 -12 15 -18" stroke="#FFD21F" strokeWidth="1" strokeLinecap="round" opacity="0.35" fill="none" />
-          <path d="M 20 -2 Q 23 -10 18 -16" stroke="#FFD21F" strokeWidth="1" strokeLinecap="round" opacity="0.35" fill="none" />
+          {/* Steam curls with animated rise */}
+          <g className="animate-steam">
+            <path d="M 12 -4 Q 10 -12 15 -18" stroke="#FFD21F" strokeWidth="1" strokeLinecap="round" opacity="0.45" fill="none" />
+            <path d="M 20 -2 Q 23 -10 18 -16" stroke="#FFD21F" strokeWidth="1" strokeLinecap="round" opacity="0.45" fill="none" />
+          </g>
         </g>
 
         {/* --- Modern Sleek Laptop (Centerpiece) --- */}
@@ -318,9 +321,9 @@ export const HeroIllustration: React.FC = () => {
             strokeWidth="2.5"
           />
 
-          {/* Robot Head Antenna */}
+          {/* Robot Head Antenna with pulsating golden tip */}
           <line x1="66" y1="25" x2="66" y2="12" stroke="#CBD5E1" strokeWidth="2.5" strokeLinecap="round" />
-          <circle cx="66" cy="10" r="4" fill="#FFD21F" filter="url(#goldGlow)" />
+          <circle cx="66" cy="10" r="4.5" fill="#FFD21F" filter="url(#goldGlow)" className="animate-gold-pulse" />
 
           {/* Robot Ear Headphones (Electric Blue Glow!) */}
           {/* Left ear */}
@@ -342,11 +345,13 @@ export const HeroIllustration: React.FC = () => {
             strokeWidth="1.5"
           />
 
-          {/* Glowing Electric Blue Expressive Eyes */}
-          <ellipse cx="51" cy="55" rx="7" ry="9" fill="url(#electricBlueGlow)" />
-          <circle cx="49" cy="52" r="2.5" fill="#FFFFFF" />
-          <ellipse cx="81" cy="55" rx="7" ry="9" fill="url(#electricBlueGlow)" />
-          <circle cx="79" cy="52" r="2.5" fill="#FFFFFF" />
+          {/* Glowing Electric Blue Expressive Eyes with soft pulse */}
+          <g className="animate-cyan-pulse">
+            <ellipse cx="51" cy="55" rx="7" ry="9" fill="url(#electricBlueGlow)" />
+            <circle cx="49" cy="52" r="2.5" fill="#FFFFFF" />
+            <ellipse cx="81" cy="55" rx="7" ry="9" fill="url(#electricBlueGlow)" />
+            <circle cx="79" cy="52" r="2.5" fill="#FFFFFF" />
+          </g>
 
           {/* Cute LED Smile */}
           <path d="M 61 68 Q 66 72 71 68" stroke="#38A0FF" strokeWidth="1.8" strokeLinecap="round" fill="none" />
@@ -371,19 +376,21 @@ export const HeroIllustration: React.FC = () => {
             strokeLinecap="round"
           />
 
-          {/* Right Arm (Waving friendly gesture!) */}
-          <path
-            d="M 94 101 C 112 96 118 76 108 66"
-            fill="none"
-            stroke="url(#robotBodyGrad)"
-            strokeWidth="10"
-            strokeLinecap="round"
-          />
-          {/* Hand */}
-          <circle cx="106" cy="63" r="6" fill="#D4DCE8" />
+          {/* Right Arm (Animated friendly waving gesture!) */}
+          <g className="animate-robot-wave">
+            <path
+              d="M 94 101 C 112 96 118 76 108 66"
+              fill="none"
+              stroke="url(#robotBodyGrad)"
+              strokeWidth="10"
+              strokeLinecap="round"
+            />
+            {/* Hand */}
+            <circle cx="106" cy="63" r="6" fill="#D4DCE8" />
+          </g>
 
-          {/* Floating "Stay Connected! 💛" Speech Bubble (FULLY IN BOUNDS) */}
-          <g transform="translate(15, -34)">
+          {/* Floating "Stay Connected! 💛" Speech Bubble (Animated gentle float) */}
+          <g transform="translate(15, -34)" className="animate-float">
             {/* Bubble Tail */}
             <polygon points="45,36 57,36 51,44" fill="#0F131D" stroke="#FFD21F" strokeWidth="1" />
             {/* Bubble Pill */}
