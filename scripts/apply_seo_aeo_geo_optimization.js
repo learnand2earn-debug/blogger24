@@ -246,3 +246,4 @@ db.categories = activeCategories;
 
 fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'utf8');
 console.log('Successfully updated ubaidblogs.json with exactly 15 master posts and clean categories!');
+

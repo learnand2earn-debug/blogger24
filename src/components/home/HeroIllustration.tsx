@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HeroIllustration: React.FC = () => {
   return (
-    <div className="relative w-full max-w-lg lg:max-w-xl mx-auto flex items-center justify-center select-none">
+    <div className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl flex items-center justify-center select-none ml-auto">
       {/* Background golden ambient glow aura */}
       <div className="absolute -inset-4 bg-gradient-to-r from-[#FFD21F]/15 via-transparent to-[#168CFF]/15 blur-3xl -z-10 rounded-full animate-pulse-slow" />
 

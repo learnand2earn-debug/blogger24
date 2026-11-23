@@ -66,7 +66,7 @@ export const CategoryShortcuts: React.FC = () => {
 
   return (
     <div className="w-full bg-[#0A0D14] border-b border-[#181F2C] py-4">
-      <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-1">
           {shortcuts.map((item) => {
             const Icon = item.icon;

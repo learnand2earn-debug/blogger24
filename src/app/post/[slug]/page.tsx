@@ -209,7 +209,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
       <div className="w-full bg-[#07090D] min-h-screen">
         {/* Breadcrumbs Navigation */}
         <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-          <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
+          <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 overflow-x-auto no-scrollbar">
               <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
                 <Home className="w-3.5 h-3.5" />
@@ -226,11 +226,11 @@ export default function ArticleDetailPage({ params }: PageProps) {
         </div>
 
         {/* Article Container */}
-        <main className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <main className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-10">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-10 w-full">
             
-            {/* Article Main Column (8 cols) */}
-            <article className="lg:col-span-8 flex flex-col gap-8">
+            {/* Article Main Column */}
+            <article className="xl:col-span-8 2xl:col-span-9 flex flex-col gap-8">
               
               {/* Header Elements */}
               <div>
@@ -421,8 +421,8 @@ export default function ArticleDetailPage({ params }: PageProps) {
 
             </article>
 
-            {/* Sticky Sidebar (4 cols) */}
-            <div className="lg:col-span-4">
+            {/* Sticky Sidebar */}
+            <div className="xl:col-span-4 2xl:col-span-3">
               <div className="sticky top-24">
                 <Sidebar categories={categories} recentPosts={allCategoryPosts} />
               </div>

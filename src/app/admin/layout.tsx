@@ -18,7 +18,7 @@ export default function AdminLayout({
   return (
     <div className="min-h-screen bg-[#07090D] flex flex-col">
       <AdminNav />
-      <div className="flex-1 w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 py-8">
+      <div className="flex-1 w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8">
         {children}
       </div>
     </div>

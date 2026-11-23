@@ -10,11 +10,11 @@ export const HeroSection: React.FC = () => {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFD21F]/10 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#168CFF]/10 rounded-full blur-[120px] pointer-events-none -z-10" />
 
-      <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
           
           {/* Left Column: Headline, Badge, Description, CTAs */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
+          <div className="lg:col-span-7 xl:col-span-7 2xl:col-span-8 flex flex-col items-start text-left z-10">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121622] border border-[#FFD21F]/40 text-[#FFD21F] text-xs font-bold tracking-wide mb-5 shadow-[0_0_15px_rgba(255,210,31,0.15)] animate-in fade-in slide-in-from-bottom-2">
               <span className="text-sm">🚀</span>
@@ -55,7 +55,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Right Column: Hero Illustration (Workspace, Laptop, Robot) */}
-          <div className="lg:col-span-5 flex justify-center items-center z-10 w-full">
+          <div className="lg:col-span-5 xl:col-span-5 2xl:col-span-4 flex justify-end items-center z-10 w-full">
             <HeroIllustration />
           </div>
 

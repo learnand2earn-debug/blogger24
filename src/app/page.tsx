@@ -43,11 +43,11 @@ export default function HomePage() {
       <CategoryShortcuts />
 
       {/* 3. Main Content Area */}
-      <main className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+      <main className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-10">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-10 w-full">
           
-          {/* Main Left Content Stream (8 columns on desktop) */}
-          <div className="lg:col-span-8 flex flex-col gap-12">
+          {/* Main Left Content Stream */}
+          <div className="xl:col-span-8 2xl:col-span-9 flex flex-col gap-12">
             
             {/* --- Section A: Featured Posts --- */}
             <section id="featured">
@@ -97,7 +97,7 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-5">
                 {latestPosts.map((post) => (
                   <ArticleCard key={post.id} post={post} />
                 ))}
@@ -124,7 +124,7 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-5">
                 {trendingPosts.map((post) => (
                   <ArticleCard key={post.id} post={post} />
                 ))}
@@ -133,8 +133,8 @@ export default function HomePage() {
 
           </div>
 
-          {/* Right Sidebar (4 columns on desktop) */}
-          <div className="lg:col-span-4">
+          {/* Right Sidebar */}
+          <div className="xl:col-span-4 2xl:col-span-3">
             <div className="sticky top-24">
               <Sidebar categories={categories} recentPosts={latestPosts} />
             </div>

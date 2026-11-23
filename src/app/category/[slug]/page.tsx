@@ -48,7 +48,7 @@ export default function CategoryArchivePage({ params, searchParams }: CategoryPa
     <div className="w-full bg-[#07090D] min-h-screen">
       {/* Breadcrumbs */}
       <div className="bg-[#0A0E16] border-b border-[#161D2B] py-3">
-        <div className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400">
             <Link href="/" className="hover:text-[#FFD21F] flex items-center gap-1">
               <Home className="w-3.5 h-3.5" />
@@ -62,7 +62,7 @@ export default function CategoryArchivePage({ params, searchParams }: CategoryPa
         </div>
       </div>
 
-      <main className="w-full max-w-[1780px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 py-10">
+      <main className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-10">
         {/* Category Header Hero */}
         <div className="rounded-3xl bg-gradient-to-r from-[#121624] via-[#0E131E] to-[#121624] border border-[#1C2538] p-8 mb-10 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFD21F]/10 rounded-full blur-[100px] pointer-events-none" />
